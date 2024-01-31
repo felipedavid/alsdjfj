@@ -1,8 +1,5 @@
 run: build
 	@./bin/app
 
-build: templ
+build:
 	@go build -o bin/app cmd/main.go
-
-templ:
-	@templ generate
