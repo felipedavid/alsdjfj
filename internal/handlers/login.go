@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"fmt"
+	"membros-web/internal/service"
 	"net/http"
 )
 
@@ -10,5 +10,20 @@ func renderLoginPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func processLoginForm(w http.ResponseWriter, r *http.Request) {
-	_, _ = fmt.Fprintf(w, "Processing the login form...")
+	err := r.ParseForm()
+	if err != nil {
+		http.Error(w, "Bad Request", http.StatusBadRequest)
+		return
+	}
+
+	email := r.FormValue("email")
+	password := r.FormValue("password")
+
+	err := service.Login(email, password)
+	if err != nil {
+		http.Error(w, "Unauthorized", http.StatusUnauthorized)
+		return
+	}
+
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
