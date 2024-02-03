@@ -8,6 +8,6 @@ import (
 func handleHandlerError(err error, w http.ResponseWriter) {
 	if err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		slog.Error(err.Error())
 	}
-	slog.Error(err.Error())
 }
