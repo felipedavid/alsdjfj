@@ -6,7 +6,8 @@ import (
 )
 
 func renderLoginPage(w http.ResponseWriter, r *http.Request) {
-	_ = renderPage(w, http.StatusOK, "login.gohtml", nil)
+	err := renderPage(w, http.StatusOK, "login.gohtml", nil)
+	handleHandlerError(err, w)
 }
 
 func processLoginForm(w http.ResponseWriter, r *http.Request) {
@@ -19,7 +20,7 @@ func processLoginForm(w http.ResponseWriter, r *http.Request) {
 	email := r.FormValue("email")
 	password := r.FormValue("password")
 
-	err := service.Login(email, password)
+	err = service.Login(email, password)
 	if err != nil {
 		http.Error(w, "Unauthorized", http.StatusUnauthorized)
 		return
