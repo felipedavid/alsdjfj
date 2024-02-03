@@ -3,3 +3,5 @@ tmp/
 .idea/
 *_templ.go
 .env
+*.exe
+__debug*

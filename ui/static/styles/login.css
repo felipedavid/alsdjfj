@@ -21,6 +21,7 @@ body {
         border-width: var(--border-width);
         border-color: var(--border-color-translucent);
         border-style: solid;
+        user-select: none;
 
         #logo {
             margin-bottom: 40px;
@@ -32,9 +33,13 @@ body {
             margin-bottom: 0.5rem;
         }
 
-        input {
+        .input-field {
             width: 100%;
             padding: 0.6rem 0.75rem;
+        }
+
+        .checkbox-label {
+            margin-top: 0.5rem;
         }
 
         button {
@@ -48,7 +53,7 @@ body {
 }
 
 .login-input {
-    > .password-label {
+    >.password-label {
         display: flex;
         justify-content: space-between;
     }
