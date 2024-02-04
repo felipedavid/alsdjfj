@@ -14,12 +14,7 @@ body {
     padding-bottom: 1.5rem;
 
     #login-form-card {
-        background-color: var(--color-white);
         padding: 40px;
-        border-radius: var(--border-radius);
-        border-width: var(--border-width);
-        border-color: var(--border-color-translucent);
-        border-style: solid;
         user-select: none;
 
         .logo {

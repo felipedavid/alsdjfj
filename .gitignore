@@ -5,3 +5,4 @@ tmp/
 .env
 *.exe
 __debug*
+todo.txt

@@ -7,7 +7,10 @@
     --color-black-3: #454545;
     --color-white: #ffff;
     --color-white-2: #F6F8FB;
+    --color-white-3: #eeeeee;
+
     --color-grey: #dddddd;
+    --color-grey-2: #666666;
 
     --border-radius: 0.5rem;
     --border-radius-2: 0.75rem;
@@ -116,4 +119,61 @@ a:hover {
 
 .logo {
     fill: var(--color-black);
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+    border-color: var(--border-color-translucent);
+    border-style: solid;
+
+    .card-header {
+        padding: 0.625rem 1.125rem;
+        font-weight: 600;
+        user-select: none;
+    }
+
+    .card-table {
+        .table-header {
+            background-color: var(--color-white-2);
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            color: var(--color-grey-2);
+            border-top: var(--border-width) solid var(--border-color-translucent);
+            user-select: none;
+        }
+
+        width: 100%;
+        border-collapse: collapse;
+
+        td {
+            text-align: left;
+            padding: 0.625rem 0;
+            border-bottom: var(--border-width) solid var;
+        }
+
+        th {
+            text-align: left;
+            padding: 0.25rem;
+
+            span {
+                cursor: pointer;
+            }
+        }
+
+        tr {
+            border-bottom: var(--border-width) solid var(--border-color-translucent);
+
+            td:nth-child(1),
+            th:nth-child(1) {
+                padding-left: 0.625rem;
+            }
+
+            td:nth-last-child(1),
+            th:nth-last-child(1) {
+                padding-right: 0.625rem;
+            }
+        }
+    }
 }
