@@ -28,6 +28,7 @@ func SetupHandlers(db *sql.DB) http.Handler {
 	// Defining our routes
 	mux.HandleFunc("GET /login", renderLoginPage)
 	mux.HandleFunc("POST /login", processLoginForm)
+	mux.HandleFunc("GET /home", renderHomePage)
 
 	// Setting up our middleware chain
 	var handler http.Handler = mux

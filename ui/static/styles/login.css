@@ -1,7 +1,6 @@
 @import url("base.css");
 
 body {
-    background-color: var(--color-white-2);
     display: flex;
     align-items: center;
     height: 100vh;
@@ -16,16 +15,15 @@ body {
 
     #login-form-card {
         background-color: var(--color-white);
-        border-radius: var(--border-radius);
         padding: 40px;
+        border-radius: var(--border-radius);
         border-width: var(--border-width);
         border-color: var(--border-color-translucent);
         border-style: solid;
         user-select: none;
 
-        #logo {
-            margin-bottom: 40px;
-            fill: var(--color-black);
+        .logo {
+            margin-bottom: 3rem;
             width: 100%;
         }
 
@@ -62,4 +60,8 @@ body {
 #not-customer {
     margin-top: 1rem;
     color: #6C7a91;
+}
+
+#not-customer {
+    user-select: none;
 }

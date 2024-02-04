@@ -1,11 +1,16 @@
 :root {
-    --color-green: #008C64;
-    --color-green-2: #006A53;
+    --color-green: #00af7d;
+    --color-green-2: #008C64;
+    --color-green-3: #006A53;
     --color-black: #232323;
+    --color-black-2: #323232;
+    --color-black-3: #454545;
     --color-white: #ffff;
     --color-white-2: #F6F8FB;
+    --color-grey: #dddddd;
 
-    --border-radius: 6px;
+    --border-radius: 0.5rem;
+    --border-radius-2: 0.75rem;
     --border-width: 1px;
     --border-color-translucent: rgba(0, 0, 0, 0.1);
 }
@@ -23,6 +28,7 @@ html {
 }
 
 body {
+    background-color: var(--color-white-2);
     font-family: 'Inter Var', sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
@@ -106,4 +112,8 @@ a:hover {
         width: 1.25rem;
         height: 1.25rem;
     }
+}
+
+.logo {
+    fill: var(--color-black);
 }
