@@ -73,6 +73,7 @@
     flex: row wrap;
     margin-top: 0.8rem;
     gap: 1%;
+    margin-bottom: 5rem;
 
     .wallet-table {
         flex-basis: 65%;
@@ -82,6 +83,22 @@
         display: flex;
         flex-direction: column;
         flex-basis: 34%;
+
+        .card-header {
+            display: flex;
+            flex-direction: row;
+            border-bottom: var(--border-width) solid var(--border-color-translucent);
+            padding: 0;
+
+            input {
+                padding: 0.7rem;
+                border: 0;
+            }
+
+            input:focus {
+                outline: none;
+            }
+        }
     }
 }
 
